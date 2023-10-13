@@ -55,21 +55,21 @@ import Profile from "./Profile";
                   id="myDIV"
                 >
                   <Button className="btnRes">
-                    <a href="#Home">
+                    <a href="Home">
                       {" "}
                       <b>Home</b>
                     </a>
                   </Button>
   
                   <Button className="btnRes">
-                    <a href="#About">
+                    <a href="About">
                       <b>About</b>
                     </a>
                   </Button>
 
   
                   <Button className="btnRes">
-                    <a href="#Contact">
+                    <a href="Contact">
                       <b>Contact</b>
                     </a>
                   </Button>
