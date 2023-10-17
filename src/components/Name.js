@@ -4,7 +4,7 @@ const Name = () => {
   return (
     <Text
       as="b"
-      fontSize={{ base: "18px", md: "24px", lg: "30px" }}
+      fontSize={{ base: "18px", md: "24px", lg: "40px" }}
       style={{ textShadow: "#FC0 1px 0 10px" }}
     >
       Nghia Ngo

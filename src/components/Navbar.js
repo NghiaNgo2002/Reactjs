@@ -1,56 +1,42 @@
-import {
-    Box,
-    Flex,
-    Button,
-    useColorModeValue,
-    Stack,
-    useColorMode,
-    Show,
-    HStack,
-    Text,
-    useDisclosure,
-    IconButton,
-    Hide,
-  } from "@chakra-ui/react";
-  import {
-    MoonIcon,
-    SunIcon,
-    HamburgerIcon,
-    CloseIcon,
-    AddIcon,
-  } from "@chakra-ui/icons";
-  import Name from "./Name";
-  import "./Navbar.css";
+import {Box,Flex,Button,useColorModeValue,Stack,useColorMode,HStack,useDisclosure,IconButton,} from "@chakra-ui/react";
+import {MoonIcon,SunIcon,HamburgerIcon,CloseIcon} from "@chakra-ui/icons";
+import Name from "./Name";
+import "./Navbar.css";
 import Profile from "./Profile";
   
-  export default function Navbar() {
+
+export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     const { isOpen, onOpen, onClose } = useDisclosure();
-  
+    
   
     return (
       <div id="navFix">
         <Box
-  bg={useColorModeValue("gray.100", "gray.900")}
-  px={9}
-  width={["100%"]}
-  display="flex" // Add this line
-  alignItems="center" // Center vertically
-  justifyContent="space-between"
->
-          <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <HStack w="42%">
+     bg={useColorModeValue("gray.0", "gray.900")}
+    px={9}
+    width={["100%"]}
+    display="flex" // Add this line
+    alignItems="center" // Center vertically  
+    justifyContent="space-between"
+        >
+
+          <Flex h={40} alignItems={"center"} justifyContent={"space-between"}>
+            <HStack w="500%">
               <Name />
-              <Profile/>
+              <Profile />
             </HStack>
   
-            <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-
+            <Flex h={16} 
+            alignItems={"center"} 
+            justifyContent={"space-between"}
+            marginLeft={50} 
+            >
 
               <HStack spacing={8} alignItems={"center"}>
                 <HStack
                   as={"nav"}
-                  spacing={4}
+                  spacing={10}
                   display={{ base: "none", md: "flex" }}
                   id="myDIV"
                 >
@@ -73,12 +59,38 @@ import Profile from "./Profile";
                       <b>Contact</b>
                     </a>
                   </Button>
+
+                  <Button className="btnRes">
+                    <a href="Shop">
+                      <b>Shop</b>
+                    </a>
+                  </Button>
+
+                  <Button className="btnRes">
+                    <a href="Product">
+                      <b>Product</b>
+                    </a>
+                  </Button>
+
+                  <Button className="btnRes">
+                    <a href="Blog">
+                      <b>Blog</b>
+                    </a>
+                  </Button>
+                  <Button className="btnRes">
+                    <a href="Pages">
+                      <b>Pages</b>
+                    </a>
+                    </Button>
                 </HStack>
               </HStack>
             </Flex>
   
             <Flex alignItems={"center"}>
-              <Stack direction={"row"} spacing={7}>
+              <Stack direction={"row"} 
+              spacing={7}
+              marginLeft={50} 
+              >
                 <Button onClick={toggleColorMode}>
                   {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
                 </Button>

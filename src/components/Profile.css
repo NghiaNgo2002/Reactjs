@@ -8,6 +8,7 @@
   overflow: hidden;
   cursor: pointer;
   background-color: #fff;
+  
 }
 
 .dropdown-menu{
@@ -76,3 +77,4 @@
   margin-left: 10px;
   transition: var(--speed);
 }
+
